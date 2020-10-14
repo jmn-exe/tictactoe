@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="title">
+        <h1>Tic Tac Toe</h1>
+        <h2>A basic 2 player tic tac toe game. O will go first then X. Enjoy!</h2>
+        </h2>
+        </div>
+        <div class="top-tac">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="0" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="1" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="2" value=" ">
+        </div>
+        <div class="middle-tac">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="3" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="4" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="5" value=" ">
+        </div>
+        <div class="bottom-tac">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="6" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="7" value=" ">
+            <input onclick="clickCheck(this.id)" type="button"
+            class="tactoe" id="8" value=" ">
+        </div>
+        <div class="score">
+            <p>Score</p>
+            <p class="scoreO" id="scoreO">O : 0</p>
+            <p class="scoreX" id="scoreX">X : 0</p>
+        </div>
+    </body>
+</html>

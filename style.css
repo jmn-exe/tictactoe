@@ -1,0 +1,47 @@
+.tactoe{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    height: 65px;
+    width: 65px;
+    font-size: 40px;
+    background-color: rgb(203, 231, 255);
+    border-style: solid;
+    border-color: rgb(0, 128, 128);
+    outline-style: none;
+}
+
+
+body {
+    background-image : url("background.jpg");
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.title {
+    display: inline-block;
+    background-color: rgba(187, 255, 252, 0.562);
+    border-radius: 25px;
+    padding : 10px 15px 10px 15px;
+    font-family: 'Balsamiq Sans', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 700;
+    background-color: rgba(215, 255, 253, 0.418);
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    border-radius: 25px;
+}

@@ -9,24 +9,43 @@ var win = 0;
 // 0 represents not yet winning for both player and 1 means last player with the mark value in variable mark wins
 var score = [0,0];
 var moves = 0;
+var aiMoved = 1;
+var aiEnable = 1;
+
+function gamemode(mode){
+    aiEnabled = (mode == "2player")? 0 : 1 ;
+    document.getElementById("tactoebox").style.display = "block";
+    document.getElementById("menu").style.display = "none";
+}
 
 function clickCheck( buttonId ){
-    if(checkIfEmpty(buttonId)){
-        assignTac( buttonId );
-        if(checkWin()){
-            addScore();
-            displayWin();
-            updateScore();
-        }else{
-            if(checkDraw()){
-                alert("This game is a draw");
-                clearGame();
+    if(aiMoved == 1 && win == 0){
+        if(checkIfEmpty(buttonId)){
+            assignTac( buttonId );
+            if(checkWin()){
+                document.getElementById("winningAudio").play();
+                setTimeout(function(){
+                    addScore();
+                    displayWin();
+                    updateScore();
+                }, 500);
             }else{
-                mark = (mark=="O")? "X" : "O";
+                if(checkDraw()){
+                    alert("This game is a draw");
+                    clearGame();
+                }else{
+                    mark = (mark=="O")? "X" : "O";
+                    if(aiEnabled == 1){
+                    aiMoved = 0;
+                    setTimeout(function(){
+                        gameAi();
+                    },750); //delay is in milliseconds
+                    }
+                }
             }
+        }else{
+            alert("That box had already been marked!");
         }
-    }else{
-        alert("That box had already been marked!");
     }
 }
 
@@ -92,4 +111,32 @@ function updateScore(){
 
 function checkDraw(){
     return(moves == 9);
+}
+
+function gameAi(){
+    var randomnum;
+    while(1){
+        randomnum = generateRandom();
+        if(checkIfEmpty(randomnum)){
+            assignTac(randomnum);
+            if(checkWin()){
+                addScore();
+                displayWin();
+                updateScore();
+            }else{
+                if(checkDraw()){
+                    alert("This game is a draw");
+                    clearGame();
+                }else{
+                    mark = (mark=="O")? "X" : "O";
+                }
+            }
+            aiMoved = 1;
+            break;
+        }
+    }
+}
+
+function generateRandom(){
+    return Math.floor(Math.random() * (9));
 }

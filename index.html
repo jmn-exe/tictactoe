@@ -9,38 +9,48 @@
     </head>
     <body>
         <div class="title">
+            <audio id="winningAudio">
+                <source src="win.mp3" type="audio/mp3">
+                    does not support audio
+            </audio>
         <h1>Tic Tac Toe</h1>
         <h2>A basic 2 player tic tac toe game. O will go first then X. Enjoy!</h2>
-        </h2>
         </div>
-        <div class="top-tac">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="0" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="1" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="2" value=" ">
+        <div class="menu" id="menu">
+            <div>Choose game mode</div>
+            <input onclick="gamemode(this.id)" type="button" id="2player" class="menu-button" value="2 Player">
+            <input onclick="gamemode(this.id)" type="button" id="aiplayer" class="menu-button" value="Versus Ai">
         </div>
-        <div class="middle-tac">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="3" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="4" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="5" value=" ">
-        </div>
-        <div class="bottom-tac">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="6" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="7" value=" ">
-            <input onclick="clickCheck(this.id)" type="button"
-            class="tactoe" id="8" value=" ">
-        </div>
-        <div class="score">
-            <p>Score</p>
-            <p class="scoreO" id="scoreO">O : 0</p>
-            <p class="scoreX" id="scoreX">X : 0</p>
+        <div class="tactoebox" id="tactoebox">
+            <div class="top-tac">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="0" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="1" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="2" value=" ">
+            </div>
+            <div class="middle-tac">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="3" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="4" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="5" value=" ">
+            </div>
+            <div class="bottom-tac">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="6" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="7" value=" ">
+                <input onclick="clickCheck(this.id)" type="button"
+                class="tactoe" id="8" value=" ">
+            </div>
+            <div class="score">
+                <p>Score</p>
+                <p class="scoreO" id="scoreO">O : 0</p>
+                <p class="scoreX" id="scoreX">X : 0</p>
+            </div>
         </div>
     </body>
 </html>

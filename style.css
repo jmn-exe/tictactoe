@@ -6,6 +6,7 @@
     height: 65px;
     width: 65px;
     font-size: 40px;
+    border-radius: 5px;
     background-color: rgb(203, 231, 255);
     border-style: solid;
     border-color: rgb(0, 128, 128);
@@ -46,4 +47,32 @@ h2 {
     display: inline-block;
     padding: 10px 10px 10px 10px;
     border-radius: 25px;
+}
+
+.tactoebox {
+    display: none;
+}
+
+.menu {
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 25px;
+    padding : 10px 15px 10px 15px;
+    background-color: rgba(187, 255, 252, 0.562);
+    font-family: 'Balsamiq Sans', cursive;
+}
+.menu-button {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: rgb(203, 231, 255);
+    border-style: solid;
+    border-color: rgb(0, 128, 128);
+    outline-style: none;
 }
